@@ -1,0 +1,22 @@
+body{
+    background-color:  #ebedf3;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.name{
+    list-style-type: none;
+    padding : 20px;
+    margin : 0; 
+    background-color: #6699cc;
+}
+.About{
+    text-align: left;
+    display: inline-block;
+}
+.Hobbies{
+    text-align: left;
+    display: inline-block;
+}
+.Links{
+    text-align: left;
+    display: inline-block;
+}
