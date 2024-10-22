@@ -2,21 +2,32 @@ body{
     background-color:  #ebedf3;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+#photo{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #BDBDBD;
+    margin-top: 0;
+
+}
 .name{
     list-style-type: none;
-    padding : 20px;
+    padding : 0;
     margin : 0; 
     background-color: #6699cc;
 }
-.About{
-    text-align: left;
+#Name{
+    display: inline-block;
+    width: 60%
+}
+#About{
+    display: inline-block;
+    
+    
+}
+#Hobbies{
     display: inline-block;
 }
-.Hobbies{
-    text-align: left;
-    display: inline-block;
-}
-.Links{
-    text-align: left;
+#Links{
     display: inline-block;
 }
