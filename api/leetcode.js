@@ -3,7 +3,7 @@ import { VercelRequest, VercelResponse } from "@vercel/node"
 export default async function handler(req, res) {
   try {
     const response = await fetch(
-      "https://leetcode-api-faisalshohag.vercel.app",
+      "https://leetcode-api-faisalshohag.vercel.app/tham112",
       {
         method: "GET",
         headers: {
