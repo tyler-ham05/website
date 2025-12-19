@@ -74,6 +74,7 @@ function Stats() {
   useEffect(() => {
     setLoading(true)
     fetch("/api/leetcode")
+      .then(res => res.json())
       .then(data => {
         console.log(data)
         setStats(data)

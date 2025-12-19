@@ -1,5 +1,3 @@
-import { VercelRequest, VercelResponse } from "@vercel/node"
-
 export default async function handler(req, res) {
   try {
     const response = await fetch(
