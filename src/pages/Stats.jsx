@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { PieChart, pieArcClasses } from '@mui/x-charts/PieChart';
 import HeatMap from '@uiw/react-heat-map'
 
-const GITHUB_API_KEY = ""
+const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API
 
 const query = `
   query ($userName: String!) {
