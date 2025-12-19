@@ -94,7 +94,7 @@ function Stats() {
   const mediaQuery = window.matchMedia('(min-width: 768px)');
   useEffect(() => {
     setLoading(true)
-    fetch("/lc/Tham112", {
+    fetch("https://leetcode-api-faisalshohag.vercel.app", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
@@ -114,7 +114,7 @@ function Stats() {
         setSubStats(subMap)
       })
       .catch(err => console.error(err));
-    fetch("/github", {
+    fetch("https://api.github.com/graphql", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
