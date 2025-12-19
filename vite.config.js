@@ -6,19 +6,17 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      /*
-      "/lc": {
+      "/api/leetcode": {
         target: "https://leetcode-api-faisalshohag.vercel.app/",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/lc/, ""),
+        rewrite: (path) => path.replace(/^\/api\/leetcode/, ""),
 
       },
-      "/github": {
+      "/api/github": {
         target: "https://api.github.com/graphql",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/github/, ""),
+        rewrite: (path) => path.replace(/^\/api\/github/, ""),
       }
-      */
     },
   },
 });

@@ -2,27 +2,6 @@ import { useEffect, useState } from "react";
 import { PieChart, pieArcClasses } from '@mui/x-charts/PieChart';
 import HeatMap from '@uiw/react-heat-map'
 
-const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API
-
-const query = `
-  query ($userName: String!) {
-    user(login: $userName) {
-      contributionsCollection {
-        contributionCalendar {
-          totalContributions
-          weeks {
-            contributionDays {
-              contributionCount
-              date
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-
 const LeetCodeStats = ({ stats, loading, subStats }) => {
   
   return (
@@ -94,10 +73,7 @@ function Stats() {
   const mediaQuery = window.matchMedia('(min-width: 768px)');
   useEffect(() => {
     setLoading(true)
-    fetch("https://leetcode-api-faisalshohag.vercel.app", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    })
+    fetch("/api/leetcode")
       .then(res => res.json())
       .then(data => {
         setStats(data)
@@ -114,17 +90,7 @@ function Stats() {
         setSubStats(subMap)
       })
       .catch(err => console.error(err));
-    fetch("https://api.github.com/graphql", {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-        'Authorization': `Bearer ${GITHUB_API_KEY}`
-      },
-      body: JSON.stringify({
-        query,
-        variables: { userName: "tyler-ham05" },
-      })
-    })
+    fetch("/api/github")
       .then(res => res.json())
       .then(data => {
         var result = []
