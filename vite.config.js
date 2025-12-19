@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/website/',
   server: {
     proxy: {
+      /*
       "/lc": {
         target: "https://leetcode-api-faisalshohag.vercel.app/",
         changeOrigin: true,
@@ -18,6 +18,7 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/github/, ""),
       }
+      */
     },
   },
 });
