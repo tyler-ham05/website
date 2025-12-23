@@ -13,8 +13,8 @@ function Home() {
       <div className="facecard">
         <img src = {prom} className="circle"/>
         <div>
-        <h2>Student @ UC Santa Cruz</h2>
-        <h2>Computer Science B.S</h2>
+        <h2 className='text-2xl font-bold'>Student @ UC Santa Cruz</h2>
+        <h2 className='text-2xl '>Computer Science B.S</h2>
         </div>
       </div>
       <div className='overview'>
